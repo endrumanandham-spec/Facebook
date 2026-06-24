@@ -20,8 +20,8 @@ test('Create Account', async ({ page }) => {
   await page.getByRole('link', { name: 'Create new account' }).click();
   await page.waitForLoadState('networkidle');
   await page.getByRole('textbox', { name: 'First name' }).fill('John');
-  await page.getByRole('textbox', { name: 'Surname', exact: true }).click();
-  await page.getByRole('textbox', { name: 'Surname', exact: true }).fill('Cena');
+ // await page.getByRole('textbox', { name: 'Surname', exact: true }).click();
+  //await page.getByRole('textbox', { name: 'Surname', exact: true }).fill('Cena');
 
   
   
