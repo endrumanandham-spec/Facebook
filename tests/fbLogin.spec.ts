@@ -18,7 +18,8 @@ test('Create Account', async ({ page }) => {
 
   await page.goto('https://www.facebook.com/');
   await page.getByRole('link', { name: 'Create new account' }).click();
-  await page.getByRole('textbox', { name: 'Name First name Surname' }).fill('John');
+  await page.waitForLoadState('networkidle');
+  await page.getByRole('textbox', { name: 'First name' }).fill('John');
   await page.getByRole('textbox', { name: 'Surname', exact: true }).fill('Cena');
 
   
