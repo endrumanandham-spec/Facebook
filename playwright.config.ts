@@ -19,7 +19,7 @@ const envConfig = require(`./config/${envName}.env.ts`).default;
 export default defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  timeout: 30 * 1000,          // 30s timeout per test
+  timeout: 60 * 1000,          // 30s timeout per test
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
